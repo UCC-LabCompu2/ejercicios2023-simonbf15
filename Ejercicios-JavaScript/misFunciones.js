@@ -3,7 +3,7 @@
  * @method conversorUnidades
  * @param {string} id - Id del input del formulario
  * @param {number} valor - Valor ingresado por el usuario
- * @return Valor que retorna
+ * @return
  */
 
 let conversorUnidades = (id, valor) => {
@@ -55,13 +55,19 @@ if (valor.includes(",")) {
  * Permite convertir grados a radianes y viceversa.
  * @method convertirGR
  * @param {string} id - Id del input del formulario
- * @return Valor que retorna
+ * @return
  */
 
 let convertirGR = (id) => {
     let gr, rad;
-    if (isNaN(rad || gr))
+    gr = document.getElementById("grados").value;
+    rad = document.getElementById("radianes").value;
 
+    if (isNaN(gr )|| isNaN(rad)){
+    gr="";
+    rad="";
+        alert('Los valores ingresados no son números');
+    } else {
         if (id === "grados") {
             gr = document.getElementById("grados").value;
             rad = (gr * Math.PI) / 180;
@@ -69,6 +75,7 @@ let convertirGR = (id) => {
             rad = document.getElementById("radianes").value;
             gr = rad * 180 / Math.PI;
         }
+    }
     document.getElementById("radianes").value = rad;
     document.getElementById("grados").value = gr
 }
