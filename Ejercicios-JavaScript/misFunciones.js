@@ -95,14 +95,60 @@ let mostrar_ocultar = (valor) => {
     }
 }
 
+
+/**
+ * Permite sumar 2 numeros
+ * @method sumar
+ * @return
+ */
 let sumar = () => {
     let sumando1, sumando2, resultado;
-
 
     sumando1 = document.getElementById("nums1").value;
     sumando2 = document.getElementById("nums2").value;
     resultado = Number(sumando1) + Number(sumando2);
     document.getElementById("totalS").value=resultado;
+}
+/**
+ * Permite restar 2 numeros
+ * @method restar
+ * @return
+ */
+let restar = () => {
+    let num1, num2, resultado;
+
+    num1 = document.getElementById("numr1").value;
+    num2 = document.getElementById("numr2").value;
+    resultado = Number(num1) - Number(num2);
+    document.getElementById("totalR").value=resultado;
+}
+
+/**
+ * Permite multiplicar 2 numeros
+ * @method multiplicar
+ * @return
+ */
+let multiplicar = () => {
+    let factor1, factor2, resultado;
+
+    factor1 = document.getElementById("numm1").value;
+    factor2 = document.getElementById("numm2").value;
+    resultado = Number(factor1) * Number(factor2);
+    document.getElementById("totalM").value=resultado;
+}
+/**
+ * Permite dividir 2 numeros
+ * @method dividir
+ * @return
+ */
+let dividir = () => {
+    let dividendo, divisor, cociente;
+
+
+    dividendo = document.getElementById("numd1").value;
+    divisor = document.getElementById("numd2").value;
+    cociente = Number(dividendo) / Number(divisor);
+    document.getElementById("totalD").value=cociente;
 
 }
 
