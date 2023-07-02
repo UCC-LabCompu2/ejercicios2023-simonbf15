@@ -311,3 +311,16 @@ let animarAuto = ()=> {
     x+=dx;
 
 }
+
+var intervalId;
+let detenerAuto = () => {
+    console.log("Se detuvo el auto")
+    clearInterval(intervalId);
+}
+
+
+let comenzarAnimacion = () => {
+    console.log("Se llamo a comenzar animacion")
+    intervalId = setInterval(animarAuto, 10);
+    setTimeout(detenerAuto, 6000);
+}
