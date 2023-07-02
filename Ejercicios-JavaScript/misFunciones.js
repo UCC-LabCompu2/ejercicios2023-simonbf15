@@ -198,7 +198,9 @@ let dibujarCirculoCuadrado = () => {
     ctx.arc(anchoMax/2,alturaMax/2,100,0,2*Math.PI);
     ctx.fill();
 
-    ctx.fillRect(0,alturaMax-100,150,100);
+    var margen =5;
+
+    ctx.fillRect(0 + margen,alturaMax-100 - margen,150,100);
     ctx.fill();
     ctx.stroke();
 }
