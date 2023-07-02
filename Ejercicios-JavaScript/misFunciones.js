@@ -9,9 +9,8 @@
 let conversorUnidades = (id, valor) => {
     let met, pul, pie, yard;
 
-    // ver eso
 if (valor.includes(",")) {
-    valor = valor.replace("," , ".");
+    valor = valor.replace(",",".");
 }
 
     if (isNaN(valor)) {
@@ -107,7 +106,7 @@ let sumar = () => {
     sumando1 = document.getElementById("nums1").value;
     sumando2 = document.getElementById("nums2").value;
     resultado = Number(sumando1) + Number(sumando2);
-    document.getElementById("totalS").value=resultado;
+    document.getElementById("totalS").innerHTML=resultado;
 }
 /**
  * Permite restar 2 numeros
@@ -120,7 +119,7 @@ let restar = () => {
     num1 = document.getElementById("numr1").value;
     num2 = document.getElementById("numr2").value;
     resultado = Number(num1) - Number(num2);
-    document.getElementById("totalR").value=resultado;
+    document.getElementById("totalR").innerHTML=resultado;
 }
 
 /**
@@ -134,7 +133,7 @@ let multiplicar = () => {
     factor1 = document.getElementById("numm1").value;
     factor2 = document.getElementById("numm2").value;
     resultado = Number(factor1) * Number(factor2);
-    document.getElementById("totalM").value=resultado;
+    document.getElementById("totalM").innerHTML=resultado;
 }
 /**
  * Permite dividir 2 numeros
@@ -148,7 +147,7 @@ let dividir = () => {
     dividendo = document.getElementById("numd1").value;
     divisor = document.getElementById("numd2").value;
     cociente = Number(dividendo) / Number(divisor);
-    document.getElementById("totalD").value=cociente;
+    document.getElementById("totalD").innerHTML=cociente;
 
 }
 
