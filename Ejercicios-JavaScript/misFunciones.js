@@ -324,3 +324,29 @@ let comenzarAnimacion = () => {
     intervalId = setInterval(animarAuto, 10);
     setTimeout(detenerAuto, 6000);
 }
+
+
+
+let animarAutonuevo = () => {
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const img = new Image();
+    img.src = "images/auto.png";
+
+    img.onload = function (){
+        canvas.width = canvas.width;
+
+        ctx.drawImage(img, x, 100);
+        requestAnimationFrame(animarAutonuevo);
+    }
+
+    if(x>canvas.width){
+        x=0;
+    }
+    x+=dx;
+}
+
+let animarNuevo = () => {
+    requestAnimationFrame(animarAutonuevo);
+}
